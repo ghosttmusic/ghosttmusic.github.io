@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0; /*Сбрасываем настройки браузера*/
+}
+
+.wrap {
+  position:fixed; /*Отсоединяем контейнер от страницы и фиксируем в окне браузера*/
+  width: 100%;   /*Ширина на все окно браузера*/
+  height: 100%;  /*Высота на все окно браузера*/
+  background-color: pink;
+  display: flex; /*Превращаем контейнер в flexBox*/
+  flex-direction: column; /*Расставляем дочерние элементы по вертикали*/
+}
+
+.header{
+  height: 32px;
+  background-color: burlywood;  
+  flex-grow: 0; /*Запрещаем увеличиваться*/
+  flex-shrink: 0; /*Запрещаем сжиматься*/
+  flex-basis: auto;  
+}
+
+  .content {
+    background-color: aliceblue;
+    overflow-y:auto; /*Вертикальная полоса прокрутки для текста*/
+    padding: 10px; /*отступы текста со всех сторон*/
+    text-align: justify; /*выравнивание текста по левому и правому краям*/     
+    flex-grow: 1; /*Предписываем занять все свободное пространство*/
+}
+
+.footer {
+  height: 32px;
+  background-color: cadetblue;  
+  flex-grow: 0; /*Запрещаем увеличиваться*/
+  flex-shrink: 0; /*Запрещаем сжиматься*/
+  flex-basis: auto;
+}
